@@ -1,0 +1,37 @@
+
+
+.page-container {
+  width: 100%;
+}
+
+.chains {
+  width: 100%;
+  display: block;
+}
+
+.chains mat-card {
+  display: inline-block;
+}
+
+mat-card {
+  width: 28%;
+  height: auto;
+  margin: 20px;
+  
+}
+mat-form-field{
+    margin-left: 30px !important;
+    margin-top: 15px;
+    
+}
+mat-form-field.mat-form-field {
+    font-size: 12px;
+  }
+
+.center{
+margin: auto;
+}
+ body{
+     height: 100vh;
+ }
+

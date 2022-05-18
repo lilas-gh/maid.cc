@@ -1,0 +1,39 @@
+
+
+.page-container {
+    width: 100%;
+  }
+  
+  .chains {
+    width: 100%;
+    display: block;
+  }
+  
+  .chains mat-card {
+    display: inline-block;
+  }
+  
+  mat-card {
+    width: 28%;
+    height: auto;
+    margin: 20px;
+    
+  }
+  .example-header-image{
+    background-image: url(../../assets/imgs/user.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+mat-card-title{
+    line-height: 40px;
+}
+  .center{
+  margin: auto;
+  margin-top: 100px;
+  }
+  
+  .back{
+      height: 100vh;
+      background-color: rgba(201, 199, 199, 0.644);
+  }

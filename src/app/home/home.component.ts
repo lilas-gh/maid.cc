@@ -4,14 +4,15 @@ import { HttpClient } from '@angular/common/http';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
-
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent implements OnInit{
+export class HomeComponent implements OnInit {
+
+
+
   title = 'maidcc';
   users: any[]=[];
   loading: boolean = true;
@@ -21,9 +22,6 @@ export class AppComponent implements OnInit{
   @ViewChild(MatPaginator) paginator:any= MatPaginator;
 
 
-  myControl = new FormControl();
-  options: any [] = [];
-  filteredOptions?: Observable<any[]>;
 
 
 
@@ -33,12 +31,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
     this.getData(1);
-    this.getoptions(1);
-    this.getoptions(2);
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value)),
-    );
+ 
   }
 
   changePage(event:PageEvent){
@@ -61,18 +54,8 @@ export class AppComponent implements OnInit{
     })
   }
 
-  getoptions(num:number=1){
-    return this.http.get(`https://reqres.in/api/users?page=${num}`).subscribe((response: any) =>{
-      for (let i=0;i<6;i++){
-        this.options.push(response.data[i].id);
-      }
-      
-    })  }
 
 
-  private _filter(value: any): any[] {
-    const filterValue = value.toString();
 
-    return this.options.filter(option => option.toString().includes(filterValue));
-  }
+
 }

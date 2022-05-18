@@ -1,0 +1,33 @@
+.profile-card{
+    width: 40%;
+    margin: auto;
+}
+.profile-card img{
+   height: 400px;
+    
+}
+.back{
+    padding-top: 50px;
+    height: 100vh;
+    background-color: rgba(201, 199, 199, 0.644);
+}
+.example-header-image{
+    background-image: url(../../assets/imgs/user.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+mat-card-title{
+    line-height: 40px;
+}
+.center{
+    margin: auto;
+    margin-top: 100px;
+    }
+@media only screen and (max-width: 850px) {
+    .profile-card{
+        width: 80%;
+        margin: auto;
+    }
+    
+}
